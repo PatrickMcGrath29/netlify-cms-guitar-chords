@@ -1,49 +1,35 @@
-# netlify-cms-widget-uuid
-Netlify CMS plugin to support UUID widgets.
+# netlify-cms-guitar-chords
 
-Widgets are inputs for the Netlify CMS editor interface. It's a React component that receives user input and outputs a serialized value.
-
-NetlifyCMS offers the ability to add referential links between collections. It unfortunately does not provide a key widget to safely link between items.
+Netlify CMS plugin to support guitar chord widgets.
 
 ## Install
 
 As an npm package:
 
-1) Install the widget:
+1. Install the widget:
+
 ```
-npm i netlify-cms-widget-uuid-v4
+npm i netlify-cms-guitar-chords
 ```
 
-2) Import the UUID widget in the netlifyCMS file:
+2. Import the widget in the netlifyCMS file:
+
 ```
-import {UuidControl, UuidPreview} from 'netlify-cms-widget-uuid-v4';
+import { NetlifyCmsWidgetGuitarChords } from 'netlify-cms-guitar-chords';
 ```
 
-3) Register the widget ready for use:
+3. Register the widget ready for use:
+
 ```
-CMS.registerWidget('uuid', UuidControl, UuidPreview)
+CMS.registerWidget(NetlifyCmsWidgetGuitarChords)
 
 ```
 
 Via `script` tag:
+
 ```html
-<script src="https://unpkg.com/netlify-cms-widget-uuid-v4@^1.0.12/dist/index.js"></script>
+<script src="https://unpkg.com/netlify-cms-guitar-chords@^1.0.0/dist/index.js"></script>
 <script type="text/javascript">
-  CMS.registerWidget('uuid', uuidWidget.UuidControl, uuidWidget.UuidPreview)
+  CMS.registerWidget(NetlifyCmsWidgetGuitarChords);
 </script>
-```
-
-## How to use
-
-Inside the YML collections file use the new widget.
-
-```
-collections:
-  - name: "example"
-    label: "Example"
-    folder: "/path/to/your/folder"
-    create: true
-    slug: "{{slug}}"
-    fields:
-      - {label: "ID", name: "id", widget: "uuid"}
 ```
