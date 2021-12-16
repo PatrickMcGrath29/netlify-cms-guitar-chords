@@ -1,12 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { WidgetPreviewContainer } from "netlify-cms-ui-default";
-import { getLyricsHTML } from "utils/songFormatter.js";
+import { getLyricsHTML } from "./utils/songFormatter.js";
 
 function GuitarChordPreview({ value }) {
-  return (
-    <WidgetPreviewContainer>{getLyricsHTML(value)}</WidgetPreviewContainer>
-  );
+  return <div>{getLyricsHTML(value)}</div>;
 }
 
 GuitarChordPreview.propTypes = {

@@ -1,5 +1,5 @@
-import { GuitarChordControl } from "./GuitarChordControl";
-import { GuitarChordPreview } from "./GuitarChordPreview";
+import GuitarChordControl from "./GuitarChordControl";
+import GuitarChordPreview from "./GuitarChordPreview";
 
 function Widget(opts = {}) {
   return {
